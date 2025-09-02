@@ -1,0 +1,156 @@
+/* Category Page Styles */
+.category-pag {
+  padding-top: 80px;
+}
+
+.category-her {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../../../images/hydraulics.webp') center/cover no-repeat ;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-her h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-her p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.all-categorie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.category-car {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-car:hover {
+  transform: translateY(-5px);
+}
+
+.category-imag {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.category-imag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.category-car:hover .category-imag img {
+  transform: scale(1.05);
+}
+
+.category-overla {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+}
+
+.category-conten {
+  padding: 1.5rem;
+  display: flex ;
+  flex-direction: column ;
+}
+
+.category-conten h2 {
+  color: var(--primary-dark);
+  margin-bottom: 0rem ;
+}
+
+.category-conten p {
+  color: var(--text-light);
+  margin-bottom: 0.0rem ;
+}
+
+.category-feature {
+  margin: 0.0rem 0 ;
+}
+
+.category-feature li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem ;
+  margin-bottom: 0.5rem ;
+  color: var(--text-color);
+}
+
+.category-feature i {
+  color: var(--accent-color);
+}
+
+.category-suppor {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.support-car {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.support-car i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.support-car h3 {
+  margin-bottom: 1rem;
+}
+
+.support-car p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .category-her {
+    padding: 3rem 1rem;
+  }
+  
+  .category-her h1 {
+    font-size: 2rem;
+  }
+  
+  .all-categorie {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-her h1 {
+    font-size: 1.8rem;
+  }
+  
+  .category-her p {
+    font-size: 1rem;
+  }
+}
+

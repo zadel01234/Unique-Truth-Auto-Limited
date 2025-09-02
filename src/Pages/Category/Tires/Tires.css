@@ -1,0 +1,360 @@
+/* category-tires.css - Specific styles for Tires & Wheels category */
+
+/* Category Hero Section */
+.category-tires .category-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../../../images/tires.webp') center/cover no-repeat !important;
+  background-blend-mode: overlay;
+  text-align: center;
+  color: white;
+  padding: 4rem 1rem !important;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.category-tires .category-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.category-tires .category-hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Breadcrumb Navigation */
+.category-tires .breadcrumb {
+  font-size: 0.95rem !important;
+  color: #000;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.category-tires .breadcrumb a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.category-tires .breadcrumb a:hover {
+  color: #e67e22;
+}
+
+.category-tires .breadcrumb span {
+  margin: 0 0px;
+  color: #000;
+  font-size: 0.95rem !important;
+}
+
+/* Main Content Layout */
+.category-tires .category-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Sidebar Styles */
+.category-tires .category-sidebar {
+  flex: 0 0 300px;
+}
+
+.category-tires .sidebar-widget {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+}
+
+.category-tires .sidebar-widget h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f1f1;
+  font-weight: 600;
+}
+
+/* Filter Sections */
+.category-tires .filter-section {
+  margin-bottom: 25px;
+}
+
+.category-tires .filter-section h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+.category-tires .filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-tires .filter-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.category-tires .filter-list label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  transition: color 0.2s;
+}
+
+.category-tires .filter-list label:hover {
+  color: #e67e22;
+}
+
+.category-tires .filter-list input[type="checkbox"] {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  accent-color: #e67e22;
+  cursor: pointer;
+}
+
+/* Price Range Slider */
+.category-tires .price-range {
+  padding: 15px 0;
+}
+
+.category-tires .price-range input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  /* -webkit-appearance: none; */
+}
+
+.category-tires .price-range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #e67e22;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.category-tires .price-values {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Filter Buttons */
+.category-tires .btn-apply {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.category-tires .btn-apply:hover {
+  background-color: #d35400;
+}
+
+.category-tires .btn-reset {
+  background: none;
+  border: none;
+  color: #666;
+  padding: 10px 20px;
+  width: 100%;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.category-tires .btn-reset:hover {
+  color: #e67e22;
+}
+
+/* Main Content Area */
+.category-tires .category-main {
+  flex: 1;
+}
+
+.category-tires .category-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.category-tires .results-count {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.category-tires .sort-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-tires .sort-options label {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.category-tires #sort {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Product Grid */
+.category-tires .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Pagination */
+.category-tires .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.category-tires .page-link {
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.category-tires .page-link:hover {
+  background-color: #f5f5f5;
+}
+
+.category-tires .page-link.active {
+  background-color: #e67e22;
+  color: white;
+  border-color: #e67e22;
+}
+
+.category-tires .page-dots {
+  padding: 8px 5px;
+}
+
+/* Installation Widget */
+.category-tires .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #e67e22;
+  color: #e67e22;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.category-tires .btn-outline:hover {
+  background-color: #e67e22;
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .category-tires .category-content {
+    flex-direction: column;
+  }
+  
+  .category-tires .category-sidebar {
+    flex: 1;
+    margin-bottom: 30px;
+  }
+  
+  .category-tires .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .category-tires .category-hero {
+    padding: 80px 0;
+  }
+  
+  .category-tires .category-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .category-tires .category-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .category-tires .category-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .category-tires .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
