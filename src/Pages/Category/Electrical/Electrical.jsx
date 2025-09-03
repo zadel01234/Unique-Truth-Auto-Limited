@@ -243,11 +243,14 @@ const Electrical = () => {
                   {product.badge && <div className="product-badge">{product.badge}</div>}
                   <div className="product-image">
                     <img src={product.image} alt={product.name} loading="lazy" />
-                    <button className="quick-view">Quick View</button>
                   </div>
                   <div className="product-info">
                     <h3><Link to={`/product-electrical-${product.id}`}>{product.name}</Link></h3>
                     <p className="product-compatibility">{product.compatibility}</p>
+                    <div className="product-rating">
+                      {renderStars(product.rating)}
+                      <span className="rating-count">({product.reviews})</span> 
+                    </div>
                     <div className="product-quote">
                       <Link 
                         to={`/contact?product=${encodeURIComponent(product.name)}&model=${encodeURIComponent(product.compatibility.replace('Fits ', ''))}`} 
@@ -256,15 +259,7 @@ const Electrical = () => {
                         Get a Quote
                       </Link>
                     </div>
-                    <div className="product-rating">
-                      {renderStars(product.rating)}
-                      <span className="rating-count">({product.reviews})</span>
-                    </div>
                     <div className="product-actions">
-                      <button className="btn-add-to-cart">Add to Cart</button>
-                      <button className="btn-wishlist" aria-label="Add to wishlist">
-                        ♡
-                      </button>
                     </div>
                   </div>
                 </div>

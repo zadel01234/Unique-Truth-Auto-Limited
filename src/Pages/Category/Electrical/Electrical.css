@@ -166,9 +166,9 @@
   transition: background-color 0.3s;
 }
 
-.category-electrical .btn-apply:hover {
+/* .category-electrical .btn-apply:hover {
   background-color: #0055aa;
-}
+} */
 
 .category-electrical .btn-reset {
   width: 100%;
@@ -232,10 +232,10 @@
   position: relative;
 }
 
-.category-electrical .product-card:hover {
+/* .category-electrical .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+} */
 
 .category-electrical .product-badge {
   position: absolute;
@@ -262,26 +262,6 @@
   transition: transform 0.3s;
 }
 
-.category-electrical .product-card:hover .product-image img {
-  transform: scale(1.05);
-}
-
-.category-electrical .quick-view {
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  padding: 8px;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: bottom 0.3s;
-}
-
-.category-electrical .product-card:hover .quick-view {
-  bottom: 0;
-}
 
 .category-electrical .product-info {
   padding: 15px;
@@ -297,9 +277,9 @@
   text-decoration: none;
 }
 
-.category-electrical .product-info h3 a:hover {
+/* .category-electrical .product-info h3 a:hover {
   color: #0066cc;
-}
+} */
 
 .category-electrical .product-compatibility {
   font-size: 0.8rem;
@@ -359,9 +339,9 @@
   transition: background-color 0.3s;
 }
 
-.category-electrical .btn-add-to-cart:hover {
+/* .category-electrical .btn-add-to-cart:hover {
   background-color: #3d8b40;
-}
+} */
 
 .category-electrical .btn-wishlist {
   width: 40px;
@@ -394,9 +374,9 @@
   transition: all 0.3s;
 }
 
-.category-electrical .page-link:hover {
+/* .category-electrical .page-link:hover {
   background-color: #f5f5f5;
-}
+} */
 
 .category-electrical .page-link.active {
   background-color: #0066cc;
@@ -446,9 +426,9 @@
   transition: color 0.3s;
 }
 
-.category-electrical .social-links a:hover {
+/* .category-electrical .social-links a:hover {
   color: #0066cc;
-}
+} */
 
 .category-electrical .footer-links ul {
   list-style: none;
@@ -536,6 +516,7 @@
   .category-electrical .product-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+
   
   .category-electrical .category-toolbar {
     flex-direction: column;

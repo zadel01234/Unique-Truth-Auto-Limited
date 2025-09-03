@@ -206,7 +206,6 @@ const Index = () => {
                 {product.badge && <div className="product-badge">{product.badge}</div>}
                 <div className="product-image">
                   <img src={product.image} alt={product.name} width="300" height="200" loading="lazy" />
-                  <button className="quick-view">Quick View</button>
                 </div>
                 <div className="product-info">
                   <h3>{product.name}</h3>

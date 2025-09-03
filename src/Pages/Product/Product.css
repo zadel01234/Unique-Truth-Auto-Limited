@@ -637,24 +637,7 @@
   object-fit: contain;
 }
 
-.quick-view {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
 
-.product-card:hover .quick-view {
-  opacity: 1;
-}
 
 .product-info {
   padding: 15px;
@@ -792,6 +775,7 @@
   }
 
   .btn-wishlist {
+    display: none;
     margin-left: 0;
     margin-top: 10px;
     justify-content: center;

@@ -239,7 +239,6 @@ const Hydraulics = () => {
                   {product.badge && <div className="product-badge">{product.badge}</div>}
                   <div className="product-image">
                     <img src={product.image} alt={product.name} loading="lazy" />
-                    <button className="quick-view">Quick View</button>
                   </div>
                   <div className="product-info">
                     <h3><Link to={`/product-hydraulics-${product.id}`}>{product.name}</Link></h3>
@@ -260,10 +259,7 @@ const Hydraulics = () => {
                       <span className="rating-count">({product.reviews})</span>
                     </div>
                     <div className="product-actions">
-                      <button className="btn-add-to-cart">Add to Cart</button>
-                      <button className="btn-wishlist" aria-label="Add to wishlist">
-                        ♡
-                      </button>
+                      <button className="btn-add-to-cart"><Link to = "/contact">Get A Quote</Link></button>
                     </div>
                   </div>
                 </div>

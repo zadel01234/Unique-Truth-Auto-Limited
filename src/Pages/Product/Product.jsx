@@ -379,7 +379,7 @@ const Product = () => {
                     height="200"
                     loading="lazy"
                   />
-                  <button className="quick-view" data-product="e1">Quick View</button>
+                  
                 </div>
                 <div className="product-info">
                   <h3>Diesel Engine Oil Filter</h3>
@@ -398,9 +398,7 @@ const Product = () => {
                     <button className="btn-add-to-cart" data-product="e1">
                       <Link to ="/contact"> Get a Quote </Link>
                     </button>
-                    <button className="btn-wishlist" aria-label="Add to wishlist">
-                      ♡
-                    </button>
+                    
                   </div>
                 </div>
               </div>
@@ -415,7 +413,6 @@ const Product = () => {
                     height="200"
                     loading="lazy"
                   />
-                  <button className="quick-view" data-product="t2">Quick View</button>
                 </div>
                 <div className="product-info">
                   <h3>Rear Tractor Tire 13.6-28</h3>
@@ -432,9 +429,7 @@ const Product = () => {
                     <button className="btn-add-to-cart" data-product="t2">
                       <Link to ="/contact"> Get a Quote </Link>
                     </button>
-                    <button className="btn-wishlist" aria-label="Add to wishlist">
-                      ♡
-                    </button>
+                    
                   </div>
                 </div>
               </div>
@@ -449,7 +444,6 @@ const Product = () => {
                     height="200"
                     loading="lazy"
                   />
-                  <button className="quick-view" data-product="o3">Quick View</button>
                 </div>
                 <div className="product-info">
                   <h3>15W-40 Diesel Engine Oil (5L)</h3>
@@ -466,9 +460,6 @@ const Product = () => {
                     <button className="btn-add-to-cart" data-product="o3">
                       <Link to ="/contact"> Get a Quote </Link>
                     </button>
-                    <button className="btn-wishlist" aria-label="Add to wishlist">
-                      ♡
-                    </button>
                   </div>
                 </div>
               </div>
@@ -483,7 +474,6 @@ const Product = () => {
                     height="200"
                     loading="lazy"
                   />
-                  <button className="quick-view" data-product="f4">Quick View</button>
                 </div>
                 <div className="product-info">
                   <h3>Diesel Fuel Filter</h3>
@@ -500,9 +490,7 @@ const Product = () => {
                     <button className="btn-add-to-cart" data-product="f4">
                       <Link to ="/contact"> Get a Quote </Link>
                     </button>
-                    <button className="btn-wishlist" aria-label="Add to wishlist">
-                      ♡
-                    </button>
+                    
                   </div>
                 </div>
               </div>

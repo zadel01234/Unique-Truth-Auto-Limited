@@ -296,7 +296,6 @@ const Tires = () => {
                   {product.badge && <div className="product-badge">{product.badge}</div>}
                   <div className="product-image">
                     <img src={product.image} alt={product.name} loading="lazy" />
-                    <button className="quick-view">Quick View</button>
                   </div>
                   <div className="product-info">
                     <h3><Link to={`/product-tires-${product.id}`}>{product.name}</Link></h3>
@@ -318,9 +317,7 @@ const Tires = () => {
                     </div>
                     <div className="product-actions">
                       <button className="btn-add-to-cart">Add to Cart</button>
-                      <button className="btn-wishlist" aria-label="Add to wishlist">
-                        ♡
-                      </button>
+                      
                     </div>
                   </div>
                 </div>
