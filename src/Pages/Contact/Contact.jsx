@@ -298,8 +298,8 @@ const Contact = () => {
     emailjs
       .send(
         "service_kkwa4ob", // your service ID
-        // "template_z6bpb3s", // your template ID
-        "template_dx5hfds",
+        "template_z6bpb3s", // your template ID
+        // "template_dx5hfds",
         {
           from_name: form.name,
           to_name: "Unique Truth Auto Limited",
