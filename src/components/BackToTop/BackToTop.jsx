@@ -63,6 +63,7 @@
 import { useState, useEffect } from "react";
 
 export default function BackToTop() {
+  const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -89,6 +90,8 @@ export default function BackToTop() {
     isVisible && (
       <button
         onClick={scrollToTop}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         style={{
           position: "fixed",
           bottom: "30px",
@@ -96,11 +99,14 @@ export default function BackToTop() {
           padding: "12px",
           borderRadius: "50%",
           border: "none",
-          backgroundColor: "#1e4568",
+          backgroundColor: isHovered ? "#1e4568" : "#2a5c8d",
           color: "white",
           cursor: "pointer",
           boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
-        }}
+          transform: isHovered ? "scale(1.1)" : "scale(1)",
+          transition: "all 0.3s ease",
+        }
+      }
         aria-label="Back to top"
       >
         <svg
