@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 // import "./Engine.css";
 import "./Hydraulics.css";
 
@@ -11,6 +12,11 @@ import hydraulics from "../../../images/hydraulics.webp";
 // import hydraulicValve from "../../images/hydraulic-valve.jpg";
 
 const Hydraulics = () => {
+  useEffect(() => {
+        document.title = "Hydraulics Categories | Unique Truth Auto "; // 👈 change tab title here
+      }, []);
+
+
   const [filters, setFilters] = useState({
     type: ['pump', 'cylinder', 'valve', 'hose', 'seal'],
     brand: ['john-deere', 'massey-ferguson', 'kubota', 'new-holland'],

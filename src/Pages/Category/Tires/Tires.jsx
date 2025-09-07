@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import "./Tires.css";
 import rearTire from "../../../images/rear_tire.jpg";
 import frontTire from "../../../images/front_tire.jpg";
@@ -7,6 +8,13 @@ import Tire from "../../../images/tires.webp";
 
 
 const Tires = () => {
+  useEffect(() => {
+        document.title = "Tires Categories | Unique Truth Auto "; // 👈 change tab title here
+      }, []);
+
+
+
+
   const [filters, setFilters] = useState({
     type: ['rear-tire', 'front-tire', 'wheel', 'tube'],
     size: ['small', 'medium', 'large'],

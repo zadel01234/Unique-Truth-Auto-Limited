@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import "./Categor.css";
 import "./Style.css";
 
@@ -10,6 +11,11 @@ import electrical from "../../../images/electrical.jpeg";
 
 
 const Category = () => {
+  useEffect(() => {
+      document.title = "Categories | Unique Truth Auto "; // 👈 change tab title here
+    }, []);
+
+
   const categories = [
     {
       id: 1,

@@ -12,6 +12,8 @@ import Electrical from "./Pages/Category/Electrical/Electrical"
 import Engine from "./Pages/Category/Engine/Engine"
 import Hydraulics from "./Pages/Category/Hydraulics/Hydraulics"
 import Tires from "./Pages/Category/Tires/Tires"
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import BackToTop from "./components/BackToTop/BackToTop";
 import './App.css'
 
 const App = () => {
@@ -19,6 +21,7 @@ const App = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/Category" element={<Category />} />
@@ -33,6 +36,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <BackToTop />
     </>
   )
 }

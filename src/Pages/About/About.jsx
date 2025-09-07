@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import "./About.css"
 import delivery from "../../images/delivery.avif"
 import support from "../../images/support.webp"
@@ -8,6 +9,11 @@ import quality from "../../images/quality.webp"
 
 
 const About = () => {
+    useEffect(() => {
+        document.title = "About Us | Unique Truth Auto "; // 👈 change tab title here
+      }, []);
+
+
   return (
     <div>
         <div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Engine.css";
 import engineOilFilter from "../../../images/engine_oil_filter.webp";
@@ -8,6 +9,11 @@ import valve from "../../../images/control_valve.webp";
 
 
 const Engine = () => {
+  useEffect(() => {
+        document.title = "Engine Categories | Unique Truth Auto "; // 👈 change tab title here
+      }, []);
+
+
   const [filters, setFilters] = useState({
     type: ['oil-filter', 'air-filter', 'fuel-filter', 'gasket', 'piston'],
     brand: ['john-deere', 'massey-ferguson', 'kubota', 'new-holland'],

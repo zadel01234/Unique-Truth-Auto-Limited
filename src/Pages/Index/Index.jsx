@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Index.css";
 import delivery from "../../images/delivery.avif";
@@ -20,6 +21,12 @@ import tires from "../../images/tires.webp";
 import engine from "../../images/engine.webp";
 
 const Index = () => {
+  useEffect(() => {
+      document.title = "Unique Truth Auto Limited"; // 👈 change tab title here
+    }, []);
+
+
+
   const featuredProducts = [
     {
       id: 1,

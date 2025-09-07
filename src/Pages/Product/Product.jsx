@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import "./Product.css"
@@ -9,6 +10,10 @@ import fuelinjector from "../../images/fuel_injector.jpg"
 import engine from "../../images/engine.webp"
 
 const Product = () => {
+  useEffect(() => {
+      document.title = "Products page | Unique Truth Auto "; // 👈 change tab title here
+    }, []);
+
   const [activeTab, setActiveTab] = useState("description");
   const [quantity, setQuantity] = useState(1);
 

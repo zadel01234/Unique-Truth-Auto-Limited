@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 import "./Contact.css";
 import iconaddress from "../../images/logo.avif";
 import iconphone from "../../images/logo.avif";
@@ -7,6 +8,12 @@ import support from "../../images/support.webp";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+    useEffect(() => {
+    document.title = "Contact page | Unique Truth Auto "; // 👈 change tab title here
+  }, []);
+
+
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",

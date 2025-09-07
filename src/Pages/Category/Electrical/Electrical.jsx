@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Electrical.css";
 
@@ -6,6 +7,12 @@ import electrical from "../../../images/electrical.jpeg"
 import Battery from "../../../images/battery.webp"
 
 const Electrical = () => {
+  useEffect(() => {
+      document.title = "Electrical Categories | Unique Truth Auto "; // 👈 change tab title here
+    }, []);
+
+
+
   const [filters, setFilters] = useState({
     type: ['alternator', 'starter', 'battery', 'switch', 'wiring'],
     brand: ['john-deere', 'massey-ferguson', 'kubota', 'new-holland'],
