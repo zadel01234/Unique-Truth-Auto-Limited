@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchResults from "./components/SearchResults/SearchResults";
 import Index from "./Pages/Index/Index";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer"
@@ -25,6 +26,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/Category" element={<Category />} />
+        <Route path="/category/:categoryName" element={<Category />} />
+
         <Route path="/Category/electrical" element={<Electrical />} />
         <Route path="/Category/engine" element={<Engine />} />
         <Route path="/Category/hydraulics" element={<Hydraulics />} />
@@ -33,6 +36,7 @@ const App = () => {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Product" element={<Product />} />
         {/* <Route path="/Cart" element={<Cart />} /> */}
+        <Route path="/search" element={<SearchResults />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

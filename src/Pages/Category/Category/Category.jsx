@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+// import { useParams } from "react-router-dom";
 import "./Categor.css";
 import "./Style.css";
 
@@ -15,6 +16,7 @@ const Category = () => {
       document.title = "Categories | Unique Truth Auto "; // 👈 change tab title here
     }, []);
 
+  // const { categoryName } = useParams();
 
   const categories = [
     {
@@ -64,6 +66,8 @@ const Category = () => {
           <span>/</span>
           <span>Product Categories</span>
         </nav>
+
+        
 
         <div className="all-categorie"
           style={{display: "grid, grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) , gap: 2rem, margin: 3rem 0"}}
