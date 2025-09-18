@@ -352,7 +352,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Tires.css";
-import tiresProductsData from "../../../data/tiresProducts"; // 👈 new import
+import tiresProducts from "../../../data/tiresProducts"; // 👈 new import
 
 const Tires = () => {
   useEffect(() => {
@@ -420,7 +420,7 @@ const Tires = () => {
   
 
   // ✅ filter products
-  const filteredProducts = tiresProductsData.filter((product) => {
+  const filteredProducts = tiresProducts.filter((product) => {
     const matchesType = filters.type.length ? filters.type.includes(product.type) : true;
     const matchesSize = filters.size.length ? filters.size.includes(product.size) : true;
     const matchesBrand = filters.brand.length ? filters.brand.includes(product.brand) : true;
