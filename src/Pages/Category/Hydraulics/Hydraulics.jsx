@@ -294,7 +294,7 @@ import { Link } from 'react-router-dom';
 import "./Hydraulics.css";
 
 // Import data
-import hydraulicsProducts from "../../../data/hydraulicsData";
+import hydraulicsProducts from "../../../Data/hydraulicsData";
 
 const Hydraulics = () => {
   useEffect(() => {
