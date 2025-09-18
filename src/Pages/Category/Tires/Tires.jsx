@@ -352,7 +352,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Tires.css";
-import tiresProducts from "../../../data/tiresProducts"; // 👈 new import
+import tiresProducts from "../../../data/tiresProducts.js";
+
 
 const Tires = () => {
   useEffect(() => {
