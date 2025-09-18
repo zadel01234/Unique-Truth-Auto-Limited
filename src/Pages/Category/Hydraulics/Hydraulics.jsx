@@ -506,7 +506,9 @@ const Hydraulics = () => {
                       <span className="rating-count">({product.reviews})</span>
                     </div>
                     <div className="product-actions">
-                      <button className="btn-add-to-cart"><Link to="/contact">Get A Quote</Link></button>
+                      <Link to="/contact" className="btn-add-to-cart">
+                        Get a Quote
+                      </Link>
                     </div>
                   </div>
                 </div>
