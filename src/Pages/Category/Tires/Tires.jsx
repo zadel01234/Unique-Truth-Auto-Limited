@@ -383,13 +383,13 @@ const Tires = () => {
     setCurrentPage(1); // reset to page 1 on filter
   };
 
-  const handlePriceChange = (e) => {
-    setFilters((prev) => ({
-      ...prev,
-      priceRange: parseInt(e.target.value),
-    }));
-    setCurrentPage(1);
-  };
+  // const handlePriceChange = (e) => {
+  //   setFilters((prev) => ({
+  //     ...prev,
+  //     priceRange: parseInt(e.target.value),
+  //   }));
+  //   setCurrentPage(1);
+  // };
 
   const resetFilters = () => {
     setFilters({
@@ -538,7 +538,7 @@ const Tires = () => {
                 </ul>
               </div>
 
-              <div className="filter-section">
+              {/* <div className="filter-section">
                 <h4>Price Range</h4>
                 <div className="price-range">
                   <input 
@@ -553,7 +553,7 @@ const Tires = () => {
                     <span>₦{filters.priceRange.toLocaleString()}+</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <button className="btn btn-primary btn-apply">Apply Filters</button>
               <button className="btn btn-text btn-reset" onClick={resetFilters}>Reset All</button>

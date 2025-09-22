@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from "react-router-dom"
 // import "../../Pages/Index/Index.css"
 import { FaCcVisa, FaCcMastercard, FaCreditCard, FaUniversity, FaMoneyBillWave } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
@@ -15,7 +16,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="footer-grid">
                         <div className="footer-col footer-about">
-                            <a href="/" className="footer-logo">
+                            <Link to="/" className="footer-logo">
                             <img
                                 src={logo}
                                 alt="Unique Truth Auto Limited"
@@ -23,30 +24,30 @@ const Footer = () => {
                                 height="60"
                                 className="logo-img"
                             />
-                            </a>
+                            </Link>
                             <p>
                             Nigeria's trusted supplier of quality tractor parts and
                             agricultural equipment since 1998.
                             </p>
                             {/* <div className="footer-social">
-                            <a href="#" aria-label="Facebook">FB</a>
-                            <a href="#" aria-label="Twitter">TW</a>
-                            <a href="#" aria-label="Instagram">IG</a>
-                            <a href="#" aria-label="WhatsApp">WA</a>
+                            <Link to="#" aria-label="Facebook">FB</Link>
+                            <Link to="#" aria-label="Twitter">TW</Link>
+                            <Link to="#" aria-label="Instagram">IG</Link>
+                            <Link to="#" aria-label="WhatsApp">WA</Link>
                             </div> */}
                             <div className="footer-social">
-                                <a href="#" aria-label="Facebook">
+                                <Link to="#" aria-label="Facebook">
                                     <FaFacebook />
-                                </a>
-                                <a href="#" aria-label="Twitter">
+                                </Link>
+                                <Link to="#" aria-label="Twitter">
                                     <FaTwitter />
-                                </a>
-                                <a href="#" aria-label="Instagram">
+                                </Link>
+                                <Link to="#" aria-label="Instagram">
                                     <FaInstagram />
-                                </a>
-                                <a href="#" aria-label="WhatsApp">
+                                </Link>
+                                <Link to="#" aria-label="WhatsApp">
                                     <FaWhatsapp />
-                                </a>
+                                </Link>
                             </div>
 
                         </div>
@@ -54,22 +55,22 @@ const Footer = () => {
                         <div className="footer-col">
                             <h3>Shop</h3>
                             <ul>
-                            <li><a href="/category/engine">Engine Parts</a></li>
-                            <li><a href="/category/tires">Tires & Wheels</a></li>
-                            <li><a href="/category/hydraulics">Hydraulic Systems</a></li>
-                            <li><a href="/category/electrical">Electrical Parts</a></li>
-                            <li><a href="/category/implements">Implements</a></li>
+                            <li><Link to="/category/engine">Engine Parts</Link></li>
+                            <li><Link to="/category/tires">Tires & Wheels</Link></li>
+                            <li><Link to="/category/hydraulics">Hydraulic Systems</Link></li>
+                            <li><Link to="/category/electrical">Electrical Parts</Link></li>
+                            <li><Link to="/category/implements">Implements</Link></li>
                             </ul>
                         </div>
 
                         <div className="footer-col">
                             <h3>Company</h3>
                             <ul>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/careers">Careers</a></li>
-                            <li><a href="/terms">Terms & Conditions</a></li>
+                            <li><Link to="/about">About Us</Link></li>
+                            <li><Link to="/contact">Contact Us</Link></li>
+                            {/* <li><Link to="/blog">Blog</Link></li>
+                            <li><Link to="/careers">Careers</Link></li>
+                            <li><Link to="/terms">Terms & Conditions</Link></li> */}
                             </ul>
                         </div>
 
@@ -85,13 +86,13 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-bottom">
-                        <div className="payment-methods">
+                        {/* <div className="payment-methods">
                             <FaCcVisa title="Visa" />
                             <FaCcMastercard title="Mastercard" />
                             <FaCreditCard title="Verve" />
                             <FaUniversity title="Bank Transfer" />
                             <FaMoneyBillWave title="Cash on Delivery" />
-                        </div>
+                        </div> */}
                         {/* <div className="payment-method">
                             <span title="Visa">Visa</span>
                             <span title="Mastercard">Mastercard</span>

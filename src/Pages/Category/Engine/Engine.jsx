@@ -359,13 +359,13 @@ const Engine = () => {
     setCurrentPage(1);
   };
 
-  const handlePriceChange = (e) => {
-    setFilters(prev => ({
-      ...prev,
-      priceRange: parseInt(e.target.value)
-    }));
-    setCurrentPage(1);
-  };
+  // const handlePriceChange = (e) => {
+  //   setFilters(prev => ({
+  //     ...prev,
+  //     priceRange: parseInt(e.target.value)
+  //   }));
+  //   setCurrentPage(1);
+  // };
 
   const resetFilters = () => {
     setFilters({ type: [], brand: [], priceRange: 50000 });
@@ -448,7 +448,7 @@ const Engine = () => {
                 </ul>
               </div>
 
-              <div className="filter-section">
+              {/* <div className="filter-section">
                 <h4>Price Range</h4>
                 <div className="price-range">
                   <input
@@ -463,7 +463,7 @@ const Engine = () => {
                     <span>₦{filters.priceRange.toLocaleString()}+</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <button className="btn btn-primary btn-apply">Apply Filters</button>
               <button className="btn btn-text btn-reset" onClick={resetFilters}>Reset All</button>
