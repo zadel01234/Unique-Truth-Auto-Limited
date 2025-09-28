@@ -289,6 +289,7 @@
 
 // export default Hydraulics;
 
+// filename: Hydraulics.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Hydraulics.css";
@@ -471,7 +472,7 @@ const Hydraulics = () => {
               </div>
               <div className="sort-options">
                 <label htmlFor="sort">Sort By:</label>
-                <select id="sort">
+                <select id="sort" style={{color: "black"}}>
                   <option>Popularity</option>
                   <option>Price: Low to High</option>
                   <option>Price: High to Low</option>
@@ -485,10 +486,15 @@ const Hydraulics = () => {
                 <div key={product.id} className="product-card">
                   {product.badge && <div className="product-badge">{product.badge}</div>}
                   <div className="product-image">
-                    <img src={product.image} alt={product.name} loading="lazy" />
+                    <Link
+                        key={product.id}
+                        to={`/product?id=${product.id}&category=${product.category}`}
+                      >
+                      <img src={product.image} alt={product.name} loading="lazy" /> 
+                    </Link>
                   </div>
                   <div className="product-info">
-                    <h3><Link to={`/product-hydraulics-${product.id}`}>{product.name}</Link></h3>
+                    <h3><Link to={`/product?id=${product.id}&category=${product.category}`}>{product.name}</Link></h3>
                     <p className="product-compatibility">{product.compatibility}</p>
                     <div className="product-price">
                       <span className="current-price">{formatPrice(product.currentPrice)}</span>

@@ -1,4 +1,4 @@
-// Example product dataset
+// filename: database.js
 
 const database = [
   {

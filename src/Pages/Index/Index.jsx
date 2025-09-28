@@ -19,6 +19,7 @@ import implement from "../../images/implements.webp";
 import hydraulics from "../../images/hydraulics.webp";
 import tires from "../../images/tires.webp";
 import engine from "../../images/engine.webp";
+import electrical from "../../images/electrical.jpeg"
 
 const Index = () => {
   useEffect(() => {
@@ -35,7 +36,8 @@ const Index = () => {
       compatibility: "Compatible with John Deere, Massey Ferguson",
       rating: 4,
       reviews: 24,
-      badge: "Best Seller"
+      badge: "Best Seller",
+      category: "Engine"
     },
     {
       id: 2,
@@ -44,7 +46,8 @@ const Index = () => {
       compatibility: "Fits most 50-75HP tractors",
       rating: 5,
       reviews: 37,
-      badge: "New Arrival"
+      badge: "New Arrival",
+      category: "Tires"
     },
     {
       id: 3,
@@ -53,7 +56,8 @@ const Index = () => {
       compatibility: "John Deere 5055D, 5060E",
       rating: 4,
       reviews: 18,
-      badge: "Top Rated"
+      badge: "Top Rated",
+      category: "Hydraulics"
     },
     {
       id: 4,
@@ -62,7 +66,8 @@ const Index = () => {
       compatibility: "Universal 3-point hitch",
       rating: 4,
       reviews: 22,
-      badge: "Best Seller"
+      badge: "Best Seller",
+      category: "Hydraulics"
     },
     {
       id: 5,
@@ -70,7 +75,8 @@ const Index = () => {
       image: tires,
       compatibility: "Fits most utility tractors",
       rating: 4,
-      reviews: 15
+      reviews: 15,
+      category: "Tires"
     },
     {
       id: 6,
@@ -79,7 +85,8 @@ const Index = () => {
       compatibility: "Massey Ferguson 265, 275",
       rating: 5,
       reviews: 29,
-      badge: "New Arrival"
+      badge: "New Arrival",
+      category: "Engine"
     },
     {
       id: 7,
@@ -88,7 +95,8 @@ const Index = () => {
       compatibility: "Universal 3-point hitch",
       rating: 4,
       reviews: 22,
-      badge: "Best Seller"
+      badge: "Best Seller",
+      category: "Hydraulics"
     },
     {
       id: 8,
@@ -96,7 +104,8 @@ const Index = () => {
       image: tires,
       compatibility: "Fits most utility tractors",
       rating: 4,
-      reviews: 15
+      reviews: 15,
+      category: "Tires"
     }
     
   ];
@@ -188,12 +197,12 @@ const Index = () => {
               </div>
             </Link>
 
-            <Link to="/category?cat=implements" className="category-card">
+            <Link to="/category/electrical" className="category-card">
               <div className="category-image">
-                <img src={implement} alt="Implements" width="300" height="200" loading="lazy" />
+                <img src={electrical} alt="Electrical" width="300" height="200" loading="lazy" />
               </div>
               <div className="category-info">
-                <h3>Implements</h3>
+                <h3>Electrical</h3>
                 <p className="category-count">90+ products</p>
               </div>
             </Link>
@@ -212,10 +221,15 @@ const Index = () => {
               <div key={product.id} className="product-card">
                 {product.badge && <div className="product-badge">{product.badge}</div>}
                 <div className="product-image">
-                  <img src={product.image} alt={product.name} width="300" height="200" loading="lazy" />
+                  <Link
+                    key={product.id}
+                    to={`/product?id=${product.id}&category=${product.category}`}
+                  >
+                    <img src={product.image} alt={product.name} width="300" height="200" loading="lazy" />
+                  </Link>
                 </div>
                 <div className="product-info">
-                  <h3>{product.name}</h3>
+                  <h3><Link to={`/product?id=${product.id}&category=${product.category}`}>{product.name}</Link></h3>
                   <p className="product-compatibility">{product.compatibility}</p>
                   <div className="product-rating">
                     {renderStars(product.rating)}
@@ -229,12 +243,6 @@ const Index = () => {
                       Get a Quote
                     </Link>
                   </div>
-                  {/* <div className="product-actions">
-                    <button className="btn-add-to-cart">Add to Cart</button>
-                    <button className="btn-wishlist" aria-label="Add to wishlist">
-                      ♡
-                    </button>
-                  </div> */}
                 </div>
               </div>
             ))}
@@ -375,7 +383,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Newsletter section */}
+        {/* Newsletter section
         <section className="newsletter-section">
           <div className="container">
             <div className="newsletter-card">
@@ -432,13 +440,8 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
-
-      {/* Back to top button */}
-      <button id="back-to-top" aria-label="Back to top">
-        ↑
-      </button>
 
       {/* Mobile menu overlay */}
       <div className="mobile-menu-overlay"></div>

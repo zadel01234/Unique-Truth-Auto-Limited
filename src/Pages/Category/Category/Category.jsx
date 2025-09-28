@@ -75,13 +75,15 @@ const Category = () => {
           {categories.map(category => (
             <div key={category.id} className="category-card">
               <div className="category-imag">
-                <img src={category.image} alt={category.name} loading="lazy" />
-                <div className="category-overla"></div>
+                <Link to={category.link} >                
+                  <img src={category.image} alt={category.name} loading="lazy" />
+                  <div className="category-overla"></div>
+                </Link>
               </div>
               <div className="category-conten">
-                <h2>{category.name}</h2>
-                <p>{category.description}</p>
-                <ul className="category-feature">
+                <h2 style={{paddingBottom: "1rem"}}><Link to={category.link}>{category.name}</Link></h2>
+                <p style={{paddingBottom: "1rem"}}>{category.description}</p>
+                <ul className="category-feature" style={{paddingBottom: "1rem"}}>
                   {category.features.map((feature, index) => (
                     <li key={index}>
                       <span>✓</span> {feature}

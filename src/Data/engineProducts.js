@@ -4,7 +4,7 @@ import engine from "../images/engine.webp";
 import starter from "../images/starter_motor.webp";
 import valve from "../images/control_valve.webp";
 
-const engineProducts = [
+let engineProducts = [
   {
     id: 1,
     name: "Premium Oil Filter",
@@ -58,19 +58,6 @@ const engineProducts = [
   },
   {
     id: 5,
-    name: "Heavy Duty Engine",
-    image: engine,
-    compatibility: "Fits Massey Ferguson 265, 275",
-    currentPrice: 21750,
-    originalPrice: 25000,
-    rating: 5,
-    reviews: 18,
-    badge: "New Arrival",
-    type: "gasket",
-    brand: "massey-ferguson",
-  },
-  {
-    id: 6,
     name: "High Performance Control Valve",
     image: valve,
     compatibility: "Fits Kubota L2501, L3301",
@@ -80,6 +67,19 @@ const engineProducts = [
     reviews: 12,
     type: "piston",
     brand: "kubota",
+  },
+  {
+    id: 6,
+    name: "Engine Gasket Set",
+    image: engine,
+    compatibility: "Fits Massey Ferguson 265, 275",
+    currentPrice: 21750,
+    originalPrice: 25000,
+    rating: 5,
+    reviews: 18,
+    badge: "New Arrival",
+    type: "gasket",
+    brand: "massey-ferguson",
   },
   {
     id: 7,
@@ -158,5 +158,10 @@ const engineProducts = [
     brand: "kubota",
   },
 ];
+
+engineProducts = engineProducts.map(product => ({
+  ...product,
+  category: "Engine",
+}));
 
 export default engineProducts;

@@ -2,7 +2,7 @@
 import electrical from "../images/electrical.jpeg";
 import Battery from "../images/battery.webp";
 
-const electricalProducts = [
+let electricalProducts = [
   {
     id: 1,
     name: "Heavy Duty Alternator",
@@ -43,6 +43,7 @@ const electricalProducts = [
     voltage: "12v",
     currentPrice: 60000,
     originalPrice: 70000,
+    category: "Engine",
   },
   {
     id: 4,
@@ -56,6 +57,7 @@ const electricalProducts = [
     voltage: "6v",
     currentPrice: 25000,
     originalPrice: 30000,
+    category: "Engine",
   },
   {
     id: 5,
@@ -70,6 +72,7 @@ const electricalProducts = [
     voltage: "12v",
     currentPrice: 40000,
     originalPrice: 48000,
+    category: "Engine",
   },
   {
     id: 6,
@@ -410,5 +413,10 @@ const electricalProducts = [
     originalPrice: 40000,
   },
 ];
+
+electricalProducts = electricalProducts.map(product => ({
+  ...product,
+  category: "Electrical",
+}));
 
 export default electricalProducts;

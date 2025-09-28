@@ -3,23 +3,9 @@ import rearTire from "../images/rear_tire.jpg";
 import frontTire from "../images/front_tire.jpg";
 import Tire from "../images/tires.webp";
 
-const tiresProducts = [
+let tiresProducts = [
   {
     id: 1,
-    name: "Rear Tractor Tire 13.6-28",
-    image: rearTire,
-    compatibility: "Fits most 50-75HP tractors",
-    currentPrice: 165000,
-    originalPrice: 180000,
-    rating: 5,
-    reviews: 37,
-    badge: "Best Seller",
-    type: "rear-tire",
-    size: "medium",
-    brand: "john-deere",
-  },
-  {
-    id: 2,
     name: "Front Tractor Tire 7.50-16",
     image: frontTire,
     compatibility: "Fits John Deere 5055D, 5060E",
@@ -31,6 +17,22 @@ const tiresProducts = [
     type: "front-tire",
     size: "small",
     brand: "john-deere",
+    category: "Tires",  
+  },
+  {
+    id: 2,
+    name: "Rear Tractor Tire 13.6-28",
+    image: rearTire,
+    compatibility: "Fits most 50-75HP tractors",
+    currentPrice: 165000,
+    originalPrice: 180000,
+    rating: 5,
+    reviews: 37,
+    badge: "Best Seller",
+    type: "rear-tire",
+    size: "medium",
+    brand: "john-deere",
+    category: "Tires",
   },
   {
     id: 3,
@@ -44,6 +46,7 @@ const tiresProducts = [
     type: "wheel",
     size: "medium",
     brand: "massey-ferguson",
+    category: "Tires",
   },
   {
     id: 4,
@@ -57,10 +60,11 @@ const tiresProducts = [
     type: "tube",
     size: "medium",
     brand: "kubota",
+    category: "Tires",
   },
   {
     id: 5,
-    name: "Large Rear Tire 18.4-34",
+    name: "Front Tractor Tire",
     image: Tire,
     compatibility: "Fits heavy-duty tractors",
     currentPrice: 245000,
@@ -71,6 +75,7 @@ const tiresProducts = [
     type: "rear-tire",
     size: "large",
     brand: "massey-ferguson",
+    category: "Tires",
   },
   {
     id: 6,
@@ -100,7 +105,7 @@ const tiresProducts = [
   },
   {
     id: 8,
-    name: "Heavy Duty Tube",
+    name: "Front Tractor Tire",
     image: Tire,
     compatibility: "For large tractor tires",
     currentPrice: 22000,
@@ -405,5 +410,10 @@ const tiresProducts = [
   },
   // ➕ You can keep adding more products here
 ];
+
+tiresProducts = tiresProducts.map(product => ({
+  ...product,
+  category: "Tires",
+}));
 
 export default tiresProducts;

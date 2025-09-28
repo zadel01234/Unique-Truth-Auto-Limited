@@ -285,6 +285,7 @@
 
 // export default Engine;
 
+// filename: Engine.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Engine.css";
@@ -486,7 +487,7 @@ const Engine = () => {
               </div>
               <div className="sort-options">
                 <label htmlFor="sort">Sort By:</label>
-                <select id="sort" value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
+                <select id="sort" style={{color: "black"}} value={sortOption} onChange={(e) => setSortOption(e.target.value)}>
                   <option>Popularity</option>
                   <option>Price: Low to High</option>
                   <option>Price: High to Low</option>
@@ -500,10 +501,15 @@ const Engine = () => {
                 <div key={product.id} className="product-card">
                   {product.badge && <div className="product-badge">{product.badge}</div>}
                   <div className="product-image">
-                    <img src={product.image} alt={product.name} loading="lazy" />
+                    <Link
+                        key={product.id}
+                        to={`/product?id=${product.id}&category=${product.category}`}
+                      >
+                      <img src={product.image} alt={product.name} loading="lazy" /> 
+                    </Link>
                   </div>
                   <div className="product-info">
-                    <h3><Link to={`/product-engine-${product.id}`}>{product.name}</Link></h3>
+                    <h3><Link to={`product?id=${product.id}&category=${product.category}`}>{product.name}</Link></h3>
                     <p className="product-compatibility">{product.compatibility}</p>
                     <div className="product-price">
                       <span className="current-price">{formatPrice(product.currentPrice)}</span>

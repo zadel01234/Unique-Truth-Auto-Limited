@@ -1,21 +1,21 @@
 // src/data/hydraulicsData.js
 import hydraulicPump from "../images/hydraulic_pump.webp";
 import hydraulics from "../images/hydraulics.webp";
+import implement from "../images/implements.webp"
 
 
-const hydraulicsProducts = [
+let hydraulicsProducts = [
   {
     id: 1,
-    name: "Hydraulic Pump Assembly",
+    name: "Control Valve Assembly",
     image: hydraulicPump,
-    compatibility: "Fits John Deere 5055D, 5060E",
-    currentPrice: 42500,
-    originalPrice: 48000,
+    compatibility: "Fits Kubota L2501, L3301",
+    currentPrice: 35200,
+    originalPrice: null,
     rating: 4,
-    reviews: 24,
-    badge: "Best Seller",
-    type: "pump",
-    brand: "john-deere",
+    reviews: 12,
+    type: "valve",
+    brand: "kubota",
   },
   {
     id: 2,
@@ -32,27 +32,28 @@ const hydraulicsProducts = [
   },
   {
     id: 3,
-    name: "Control Valve Assembly",
+    name: "Hydraulic Pump Assembly",
     image: hydraulicPump,
-    compatibility: "Fits Kubota L2501, L3301",
-    currentPrice: 35200,
-    originalPrice: null,
+    compatibility: "Fits John Deere 5055D, 5060E",
+    currentPrice: 42500,
+    originalPrice: 48000,
     rating: 4,
-    reviews: 12,
-    type: "valve",
-    brand: "kubota",
+    reviews: 24,
+    badge: "Best Seller",
+    type: "pump",
+    brand: "john-deere",
   },
   {
     id: 4,
-    name: "Hydraulic Hose Kit",
-    image: hydraulics,
-    compatibility: "Universal fit for most tractors",
-    currentPrice: 18500,
-    originalPrice: 22000,
+    name: "Plough Implement",
+    image: implement,
+    currentPrice: 42500,
+    originalPrice: 48000,
+    compatibility: "Universal 3-point hitch",
     rating: 4,
-    reviews: 15,
-    type: "hose",
-    brand: "universal",
+    reviews: 22,
+    badge: "Best Seller",
+    type: "pump"
   },
   {
     id: 5,
@@ -81,16 +82,15 @@ const hydraulicsProducts = [
   },
   {
     id: 7,
-    name: "Hydraulic Pump Assembly",
-    image: hydraulicPump,
-    compatibility: "Fits John Deere 5055D, 5060E",
+    name: "Plough Implement",
+    image: implement,
     currentPrice: 42500,
     originalPrice: 48000,
+    compatibility: "Universal 3-point hitch",
     rating: 4,
-    reviews: 24,
+    reviews: 22,
     badge: "Best Seller",
-    type: "pump",
-    brand: "john-deere",
+    type: "pump"
   },
   {
     id: 8,
@@ -303,7 +303,24 @@ const hydraulicsProducts = [
     reviews: 19,
     type: "filter",
     brand: "new-holland",
-  }
+  },
+  {
+    id: 25,
+    name: "Hydraulic Hose Kit",
+    image: hydraulics,
+    compatibility: "Universal fit for most tractors",
+    currentPrice: 18500,
+    originalPrice: 22000,
+    rating: 4,
+    reviews: 15,
+    type: "hose",
+    brand: "universal",
+  },
+  
 ];
+hydraulicsProducts = hydraulicsProducts.map(product => ({
+  ...product,
+  category: "Hydraulics",
+}));
 
 export default hydraulicsProducts;

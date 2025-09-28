@@ -413,7 +413,7 @@ const NavBar = () => {
           <Link to="/category" className={activeLink.startsWith('/category') ? 'active' : ''} onClick={closeMobileMenu}>Category</Link>
           <Link to="/about" className={activeLink.startsWith('/about') ? 'active' : ''} onClick={closeMobileMenu}>About Us</Link>
           <Link to="/contact" className={activeLink.startsWith('/contact') ? 'active' : ''} onClick={closeMobileMenu}>Contact</Link>
-          <Link to="/product" className={activeLink.startsWith('/product') ? 'active' : ''} onClick={closeMobileMenu}>Products</Link>
+          {/* <Link to="/product" className={activeLink.startsWith('/product') ? 'active' : ''} onClick={closeMobileMenu}>Products</Link> */}
 
           {/* Search bar with dropdown */}
           <div className="search-form" ref={searchRef}>

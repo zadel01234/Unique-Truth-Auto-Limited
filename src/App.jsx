@@ -7,7 +7,7 @@ import Category from "./Pages/Category/Category/Category";
 import About from "./Pages/About/About"
 import NotFound from "./Pages/NotFound/NotFound";
 import Contact from "./Pages/Contact/Contact"
-import Product from "./Pages/Product/Product"
+// import Product from "./Pages/Product/Product"
 // import Cart from "./Pages/Cart/Cart"
 import Electrical from "./Pages/Category/Electrical/Electrical"
 import Engine from "./Pages/Category/Engine/Engine"
@@ -15,6 +15,7 @@ import Hydraulics from "./Pages/Category/Hydraulics/Hydraulics"
 import Tires from "./Pages/Category/Tires/Tires"
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import BackToTop from "./components/BackToTop/BackToTop";
+import Product from "./Pages/Product/Prod"
 import './App.css'
 
 const App = () => {
@@ -34,7 +35,12 @@ const App = () => {
         <Route path="/Category/tires" element={<Tires />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Product" element={<Product />} />
+        <Route path="/product" element={<Product />} />
+        {/* <Route path="product" element={<Product/>}> */}
+          {/* <Route path="/product/:id" element={<Product />} /> */}
+        {/* </Route> */}
+        {/* <Route path="/Product" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} /> */}
         {/* <Route path="/Cart" element={<Cart />} /> */}
         <Route path="/search" element={<SearchResults />} />
         <Route path="*" element={<NotFound />} />

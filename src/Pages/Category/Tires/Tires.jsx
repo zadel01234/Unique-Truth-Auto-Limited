@@ -348,7 +348,7 @@
 
 // export default Tires;
 
-
+// filename: Tires.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Tires.css";
@@ -582,11 +582,17 @@ const Tires = () => {
                 <div key={product.id} className="product-card">
                   {product.badge && <div className="product-badge">{product.badge}</div>}
                   <div className="product-image">
-                    <img src={product.image} alt={product.name} loading="lazy" />
+                    {/* <Link to={`/product/${product.id}`}><img src={product.image} alt={product.name} loading="lazy" /></Link> */}
+                    <Link
+                        key={product.id}
+                        to={`/product?id=${product.id}&category=${product.category}`}
+                      >
+                      <img src={product.image} alt={product.name} loading="lazy" /> 
+                    </Link>
                   </div>
                   <div className="product-info">
                     <h3>
-                      <Link to={`/product-tires-${product.id}`}>{product.name}</Link>
+                      <Link to={`/product?id=${product.id}&category=${product.category}`}>{product.name}</Link>
                     </h3>
                     <p className="product-compatibility">{product.compatibility}</p>
                     <div className="product-price">
